@@ -1,0 +1,4 @@
+# Copy to .env and fill in your values, then run with:
+#   uv run --env-file .env src/examples/publisher.py
+SERVER_URL=nats://localhost:4222
+SUBJECT=robot.telemetry

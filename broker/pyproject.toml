@@ -1,7 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
 name = "broker"
 version = "0.1.0"
-description = "Add your description here"
-readme = "README.md"
-requires-python = ">=3.11"
-dependencies = []
+description = "NATS broker plus example publisher and subscriber"
+requires-python = ">=3.14"
+dependencies = [
+    "nats-py>=2.16.0",
+    "nats-server",
+]
+
+[tool.hatch.build.targets.wheel]
+only-include = ["src"]
+sources = ["src"]
+
+[tool.uv.sources]
+nats-server = { git = "https://github.com/nats-io/nats.py", subdirectory = "nats-server" }

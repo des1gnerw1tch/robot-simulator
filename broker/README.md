@@ -1,0 +1,1 @@
+At the moment, this python project does not actually include a broker. We should dockerize a local broker in the future to be used as a test broker, but for now we are using a external production nats broker.
