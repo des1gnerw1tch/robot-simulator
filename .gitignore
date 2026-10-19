@@ -115,3 +115,6 @@ __pycache__/
 
 # Environment
 .env
+
+# VSCode
+.vscode/
