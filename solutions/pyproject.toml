@@ -9,12 +9,8 @@ description = "NATS broker plus example publisher and subscriber"
 requires-python = ">=3.14"
 dependencies = [
     "nats-py>=2.16.0",
-    "nats-server",
 ]
 
 [tool.hatch.build.targets.wheel]
 only-include = ["src"]
 sources = ["src"]
-
-[tool.uv.sources]
-nats-server = { git = "https://github.com/nats-io/nats.py", subdirectory = "nats-server" }
