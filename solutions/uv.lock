@@ -3,21 +3,6 @@ revision = 3
 requires-python = ">=3.14"
 
 [[package]]
-name = "broker"
-version = "0.1.0"
-source = { editable = "." }
-dependencies = [
-    { name = "nats-py" },
-    { name = "nats-server" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "nats-py", specifier = ">=2.16.0" },
-    { name = "nats-server", git = "https://github.com/nats-io/nats.py?subdirectory=nats-server" },
-]
-
-[[package]]
 name = "nats-py"
 version = "2.16.0"
 source = { registry = "https://pypi.org/simple" }
@@ -30,3 +15,18 @@ wheels = [
 name = "nats-server"
 version = "0.0.0"
 source = { git = "https://github.com/nats-io/nats.py?subdirectory=nats-server#db5f8da04f8c09c151eaa55febb418a8986a7aec" }
+
+[[package]]
+name = "solutions"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "nats-py" },
+    { name = "nats-server" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "nats-py", specifier = ">=2.16.0" },
+    { name = "nats-server", git = "https://github.com/nats-io/nats.py?subdirectory=nats-server" },
+]
